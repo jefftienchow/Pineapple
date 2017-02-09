@@ -342,11 +342,15 @@ def play_game():
     return game_score
     
 def full_game():
+    again=True
     score=0
-    while 5==5:
+    while again:
         game_score=play_game()
         score+=game_score
         print ('Total score is: ',score)
+        play_again=input ('Play game again?')
+        if play_again!= 'Yes' or 'yes':
+            again=False
     
 #get_score(['2 of Diamonds','Q of Spades','Q of Diamonds'],['J of Clovers','10 of Clovers','2 of Clovers','3 of Clovers','4 of Clovers'],['4 of Spades','4 of Clovers','4 of Hearts','4 of Diamonds','K of Hearts'],False)
 full_game()
